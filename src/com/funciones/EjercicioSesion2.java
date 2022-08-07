@@ -1,4 +1,6 @@
+package com.funciones;
 public class EjercicioSesion2 {
+
     public static void main(String[] args) {
 
         double precioSinIvA = 500.0;

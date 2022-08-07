@@ -1,3 +1,4 @@
+package com.javasintaxsis;
 public class EjercicioSesion1 {
     public static void main(String[] args) {
 

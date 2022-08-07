@@ -1,3 +1,4 @@
+package com.estructurascontrol;
 public class EjercicioSesion3 {
     public static void main(String[] args) {
         String[] nombres = {"Pepe", "Juan", "Anthony"};
