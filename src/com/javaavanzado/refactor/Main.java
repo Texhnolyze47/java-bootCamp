@@ -4,11 +4,11 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        hoyEsDomingo();
+        hoyEsDomingo(7);
     }
 
-    public static boolean hoyEsDomingo(){
-    boolean isDomingo = hoyEsDianNumero(7);
+    public static boolean hoyEsDomingo(int numero){
+    boolean isDomingo = (numero == 7 ? true : false);
     if (isDomingo){
         return true;
     }
@@ -16,12 +16,7 @@ public class Main {
 
     }
 
-    public static boolean hoyEsDianNumero(int numero){
-        if (numero == 7){
-            return true;
-        }
-        return false;
-    }
+
 
     public static void imprimirMayorMenor(int []numeros){
         int mayor = Arrays.stream(numeros)
