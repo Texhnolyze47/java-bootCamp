@@ -4,7 +4,23 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
+        hoyEsDomingo();
+    }
 
+    public static boolean hoyEsDomingo(){
+    boolean isDomingo = hoyEsDianNumero(7);
+    if (isDomingo){
+        return true;
+    }
+    return false;
+
+    }
+
+    public static boolean hoyEsDianNumero(int numero){
+        if (numero == 7){
+            return true;
+        }
+        return false;
     }
 
     public static void imprimirMayorMenor(int []numeros){
