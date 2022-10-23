@@ -1,18 +1,41 @@
 package com.objects;
 
-public class SmartWatch extends SmartDevice{
-
+public class SmartWatch{
+    String marca;
+    String modelo;
+    String color;
     double pulgadas;
     String conectividad;
 
-    public SmartWatch() {
+    private SmartWatch() {
     }
 
-    public SmartWatch(String marca, String modelo, String color, double pulgadas, String conectividad) {
-        super(marca, modelo, color);
-        this.pulgadas = pulgadas;
-        this.conectividad = conectividad;
+    public SmartWatch (String marca) {
+        this.marca = marca;
     }
+
+    public SmartWatch conModelo(String modelo) {
+        this.modelo = modelo;
+        return this;
+    }
+
+    public SmartWatch conColor(String color) {
+        this.color = color;
+        return this;
+    }
+
+    public SmartWatch conPulgadas(double pulgadas){
+        this.pulgadas = pulgadas;
+        return this;
+    }
+
+
+    public SmartWatch conConectividad(String conectividad){
+        this.conectividad = conectividad;
+        return this;
+    }
+
+
 
     @Override
     public String toString() {

@@ -1,18 +1,42 @@
 package com.objects;
 
-public class SmartPhone extends SmartDevice {
+public class SmartPhone {
 
+    String marca;
+    String modelo;
+    String color;
     int ram;
     String sistema;
 
-    public SmartPhone() {
+    private SmartPhone() {
+
     }
 
-    public SmartPhone(String marca, String modelo, String color, int ram, String sistema) {
-        super(marca, modelo, color);
-        this.ram = ram;
-        this.sistema = sistema;
+
+    public SmartPhone (String marca) {
+        this.marca = marca;
     }
+
+    public SmartPhone conModelo(String modelo) {
+        this.modelo = modelo;
+        return this;
+    }
+
+    public SmartPhone conColor(String color) {
+        this.color = color;
+        return this;
+    }
+
+    public SmartPhone conRam(int ram) {
+        this.ram = ram;
+        return this;
+    }
+
+    public SmartPhone conSistema(String sistema) {
+        this.sistema = sistema;
+        return this;
+    }
+
 
     @Override
     public String toString() {
