@@ -4,12 +4,16 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println(esOracleEnMacOS());
+
 
     }
 
-    public boolean esOracleEnMacOS(){
-        if (System.getProperty("java.runtime.name").contains("Oracle")
-        && System.getProperty("os.version").compareTo("11.6") == 0){
+    public static boolean esOracleEnMacOS(){
+        boolean runTimeOracle =  System.getProperty("java.runtime.name").contains("Oracle");
+        boolean osVersion = System.getProperty("os.version").compareTo("11.6") == 0 ? true : false;
+        if ( runTimeOracle && osVersion){
+            System.out.println("Es oracle JVM");
             return true;
         }
         return  false;
