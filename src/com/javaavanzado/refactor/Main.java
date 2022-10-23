@@ -4,8 +4,10 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int [] numeros = { 12,23,45,1,9};
-        imprimirMayorMenor(numeros);
+        ConstructorLargoBuilder cosa = new ConstructorLargoBuilder("marcar")
+                .conModelo("modelo")
+                .conMotor("motor")
+                .conPuertas(4);
     }
 
     public static void imprimirMayorMenor(int []numeros){
