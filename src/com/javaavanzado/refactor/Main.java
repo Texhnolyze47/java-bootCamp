@@ -4,15 +4,14 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        hoyEsDomingo(7);
+        System.out.println(hoyEsDomingo(7));
+
     }
 
     public static boolean hoyEsDomingo(int numero){
     boolean isDomingo = (numero == 7 ? true : false);
-    if (isDomingo){
-        return true;
-    }
-    return false;
+
+    return isDomingo;
 
     }
 
