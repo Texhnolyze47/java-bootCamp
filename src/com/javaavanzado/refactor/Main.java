@@ -4,9 +4,17 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(hoyEsDomingo(7));
 
     }
+
+    public boolean esOracleEnMacOS(){
+        if (System.getProperty("java.runtime.name").contains("Oracle")
+        && System.getProperty("os.version").compareTo("11.6") == 0){
+            return true;
+        }
+        return  false;
+    }
+
 
     public static boolean hoyEsDomingo(int numero){
     boolean isDomingo = (numero == 7 ? true : false);
