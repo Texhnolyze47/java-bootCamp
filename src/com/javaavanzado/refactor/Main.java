@@ -4,10 +4,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        ConstructorLargoBuilder cosa = new ConstructorLargoBuilder("marcar")
-                .conModelo("modelo")
-                .conMotor("motor")
-                .conPuertas(4);
+
     }
 
     public static void imprimirMayorMenor(int []numeros){
@@ -28,5 +25,12 @@ public class Main {
         }
 
         return valor2;
+    }
+
+    public static void claseBuilder(){
+        ConstructorLargoBuilder cosa = new ConstructorLargoBuilder("marcar")
+                .conModelo("modelo")
+                .conMotor("motor")
+                .conPuertas(4);
     }
 }
