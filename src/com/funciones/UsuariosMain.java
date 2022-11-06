@@ -2,6 +2,9 @@ package com.funciones;
 
 public class UsuariosMain {
     public static void main(String[] args) {
+
+        // TODO: Mejorar el codigo con buenos comentarios
+
         Usuarios usuarios1 = new Usuarios();
         Usuario usuario = new Usuario();
         usuario.nombre = "Pepe";
