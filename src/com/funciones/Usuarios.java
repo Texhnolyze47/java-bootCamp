@@ -11,18 +11,17 @@ import java.util.ArrayList;
  * tras una refactorización donde mantener el codigo antiguo era más costoso
  * que implementrar esta nueva clase
  *
- * A consecuencia de estos cambios, y al mantener durante un tiempo de transicion
- * la vieja clase, se recomienda utilizar un patron "facade" que esconda al
- * desarrollador final esta transicion
- *
- * Al finalizar el patron facade, en primer instancia, el desarrollador deberá invocar
- * a los nuevos métodos, para garantizar a futuro, no deba volver a cambiar el codigo que interactua con la
- * base de datos de usuarios
+ * Como consecuencia hay que cambiar las instacias de UserManager por Usuarios
  */
 public class Usuarios {
+    /** Lista de usuarios */
     private ArrayList<Usuario> usuarios = new ArrayList<>();
 
-
+    private boolean hoyEsDomingo(int numeroDia){
+        //Si numeroDia es 0, lo consideramos domingo por el calendario
+        // que siguen los estadounidenses
+        return numeroDia == 0 || numeroDia == 7;
+    }
 
 //    public void addUsuario(String nombre, String apellido, int edad, boolean puedeConducir){
 //        Usuario usuario = new Usuario();
@@ -43,11 +42,9 @@ public class Usuarios {
 //    }
 
     /**
-     * Texhnolyze47@03/11/2022
-     * Cambio la implementación a una con argumentos variables
-     *
-     * Esta función añade un número variable de objetos del tipo Usuario
-     * en la instancia actual
+     * Añade un nuevo usuario a la lista
+     * @param usuarios Uno o varios objetos de tipo Usuarios
+     * @throws UserException Si el usuario ya está registrado
      */
     public void addUsuarios(Usuario ...usuarios) throws UserException {
         for (Usuario usuario : usuarios){
